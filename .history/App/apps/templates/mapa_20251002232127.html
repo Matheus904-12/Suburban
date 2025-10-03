@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPTM Tracker - Rastreamento em Tempo Real</title>
+    <!-- Usando Leaflet.js (OpenStreetMap) - alternativa gratuita ao Google Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-bg-light: #f5f6fa;
+            --primary-bg-dark: #181a20;
+            --primary-text-light: #222;
+            --primary-text-dark: #f5f6fa;
+            --accent: #e84118;
+            --card-bg-light: #fff;
+            --card-bg-dark: #23272f;
+            --transition: 0.3s cubic-bezier(.4, 0, .2, 1);
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --info: #3498db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--primary-bg-light);
+            color: var(--primary-text-light);
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            transition: background var(--transition), color var(--transition);
+            overflow-x: hidden;
+        }
+
+        body.dark {
+            background: var(--primary-bg-dark);
+            color: var(--primary-text-dark);
+        }
+
+        .navbar {
+            background: var(--card-bg-light);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        body.dark .navbar {
+            background: var(--card-bg-dark);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .control-btn {
+            background: var(--primary-bg-light);
+            color: var(--primary-text-light);
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        body.dark .control-btn {
+            background: var(--primary-bg-dark);
+            color: var(--primary-text-dark);
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .theme-toggle {
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+        }
+
+        .main-container {
+            display: flex;
+            height: calc(100vh - 80px);
+        }
+
+        .sidebar {
+            width: 350px;
+            background: var(--card-bg-light);
+            padding: 1.5rem;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition);
+        }
+
+        body.dark .sidebar {
+            background: var(--card-bg-dark);
+        }
+
+        .sidebar.collapsed {
+            width: 80px;
+        }
+
+        .info-card {
+            background: var(--card-bg-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all var(--transition);
+        }
+
+        body.dark .info-card {
+            background: var(--card-bg-dark);
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0.75rem;
+            background: var(--primary-bg-light);
+            border-radius: 8px;
+        }
+
+        body.dark .stat-item {
+            background: var(--primary-bg-dark);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .clima-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--info), #5dade2);
+            border-radius: 8px;
+            color: white;
+        }
+
+        .clima-icon {
+            font-size: 2rem;
+        }
+
+        .linha-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .linha-item:hover {
+            background: var(--primary-bg-light);
+        }
+
+        body.dark .linha-item:hover {
+            background: var(--primary-bg-dark);
+        }
+
+        .linha-cor {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .map-container {
+            flex: 1;
+            position: relative;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-controls {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 100;
+        }
+
+        .map-btn {
+            background: var(--card-bg-light);
+            color: var(--primary-text-light);
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition);
+        }
+
+        body.dark .map-btn {
+            background: var(--card-bg-dark);
+            color: var(--primary-text-dark);
+        }
+
+        .map-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .notification-panel {
+            position: fixed;
+            top: 100px;
+            right: -400px;
+            width: 380px;
+            height: calc(100vh - 120px);
+            background: var(--card-bg-light);
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: right var(--transition);
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+
+        body.dark .notification-panel {
+            background: var(--card-bg-dark);
+        }
+
+        .notification-panel.open {
+            right: 0;
+        }
+
+        .notification-item {
+            background: var(--primary-bg-light);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent);
+            transition: all var(--transition);
+        }
+
+        body.dark .notification-item {
+            background: var(--primary-bg-dark);
+        }
+
+        .notification-item:hover {
+            transform: translateX(-4px);
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition);
+        }
+
+        .loading-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .status-operacional { color: var(--success); }
+        .status-atrasado { color: var(--warning); }
+        .status-manutencao { color: var(--danger); }
+
+        .lotacao-baixa { color: var(--success); }
+        .lotacao-media { color: var(--warning); }
+        .lotacao-alta { color: var(--danger); }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                left: -350px;
+                height: 100%;
+                z-index: 1002;
+            }
+            
+            .sidebar.open {
+                left: 0;
+            }
+            
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .navbar {
+                padding: 1rem;
+            }
+            
+            .nav-controls {
+                gap: 0.5rem;
+            }
+        }
+
+        /* ========== ANIMAÇÕES PARA PONTOS DE CONTROLE E TRAJETOS ========== */
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+            }
+            50% {
+                transform: scale(1.2);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+            }
+        }
+        
+        @keyframes stationHighlight {
+            0% {
+                box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.6);
+            }
+            100% {
+                box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+            }
+        }
+        
+        .station-control-point {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .station-control-point:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+        
+        .custom-train-marker {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .custom-train-marker:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+        
+        /* Efeito de trilha para movimento dos trens */
+        .train-trail {
+            animation: fadeTrail 2s ease-out forwards;
+        }
+        
+        @keyframes fadeTrail {
+            0% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-train"></i> CPTM Tracker
+        </div>
+        <div class="nav-controls">
+            <button class="control-btn" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+                <span>Menu</span>
+            </button>
+            <button class="control-btn" id="notificationToggle">
+                <i class="fas fa-bell"></i>
+                <span>Alertas</span>
+            </button>
+            <button class="control-btn" id="refreshData">
+                <i class="fas fa-sync"></i>
+                <span>Atualizar</span>
+            </button>
+            <button class="control-btn theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="sidebar" id="sidebar">
+            <div class="info-card">
+                <div class="card-title">
+                    <i class="fas fa-chart-line"></i>
+                    Estatísticas Gerais
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalTrens">{{ total_trens }}</div>
+                        <div class="stat-label">Trens Ativos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalEstacoes">{{ total_estacoes }}</div>
+                        <div class="stat-label">Estações</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="trensOperacionais">{{ trens_operacionais }}</div>
+                        <div class="stat-label">Operacionais</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Linhas</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-title">
+                    <i class="fas fa-cloud-sun"></i>
+                    Condições Climáticas
+                </div>
+                <div class="clima-info" id="climaInfo">
+                    <div class="clima-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; font-size: 1.1rem;">Carregando...</div>
+                        <div style="opacity: 0.8;">Aguarde...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="card-title">
+                    <i class="fas fa-route"></i>
+                    Linhas da CPTM
+                </div>
+                <div id="linhasList">
+                    {% for linha in linhas %}
+                    <div class="linha-item" data-linha="{{ linha.numero }}" onclick="focusOnLine('{{ linha.numero }}')">
+                        <div class="linha-cor" style="background-color: {{ linha.cor }};"></div>
+                        <div>
+                            <div style="font-weight: 600;">{{ linha.nome }}</div>
+                            <div style="font-size: 0.8rem; opacity: 0.7;">
+                                <span class="status-operacional">● Operacional</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="map-controls">
+                <button class="map-btn" onclick="centerMap()" title="Centralizar mapa">
+                    <i class="fas fa-crosshairs"></i>
+                </button>
+                <button class="map-btn" onclick="toggleTraffic()" title="Trânsito">
+                    <i class="fas fa-car"></i>
+                </button>
+                <button class="map-btn" onclick="toggleFullscreen()" title="Tela cheia">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification-panel" id="notificationPanel">
+        <div class="card-title">
+            <i class="fas fa-bell"></i>
+            Notificações e Alertas
+        </div>
+        <div id="notificationsList">
+            <div class="notification-item">
+                <div style="font-weight: 600; margin-bottom: 0.5rem;">Sistema Online</div>
+                <div style="font-size: 0.9rem; opacity: 0.8;">Todos os sistemas estão funcionando normalmente.</div>
+                <div style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.6;">Agora</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Variáveis globais para Leaflet
+        let map;
+        let markers = {};
+        let trainMarkers = {};
+        let websocket;
+        let markerLayer;
+        let lineTrajectories = {}; // Trajetos das linhas
+        let trainPaths = {}; // Caminhos dos trens
+        let stationControlPoints = {}; // Pontos de controle das estações
+        
+        // Dados do backend
+        const estacoes = {{ estacoes_json|safe }};
+        const trens = {{ trens_json|safe }};
+        const climaData = {{ clima_json|safe }};
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            setupEventListeners();
+            connectWebSocket();
+            updateClimateInfo();
+            startDataRefresh();
+        });
+
+        function initializeApp() {
+            showLoading();
+            initMap();
+            setTimeout(hideLoading, 2000);
+        }
+
+        function setupEventListeners() {
+            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+            document.getElementById('sidebarToggle').addEventListener('click', toggleSidebar);
+            document.getElementById('notificationToggle').addEventListener('click', toggleNotifications);
+            document.getElementById('refreshData').addEventListener('click', refreshAllData);
+        }
+
+        function initMap() {
+            // Criar mapa Leaflet centrado em São Paulo
+            map = L.map('map').setView([-23.5505, -46.6333], 11);
+            
+            // Adicionar tiles do OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetMap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            // Criar camada para marcadores
+            markerLayer = L.layerGroup().addTo(map);
+            
+            // Inicializar trajetos das linhas
+            initLineTrajectories();
+            
+            // Adicionar estações como pontos de controle
+            estacoes.forEach(addStationControlPoint);
+            
+            // Adicionar trens
+            trens.forEach(addTrainMarker);
+            
+            // Desenhar linhas de trajeto
+            drawLineTrajectories();
+        }
+
+        function addStationMarker(estacao) {
+            // Validar se a estação tem coordenadas válidas
+            if (!estacao || typeof estacao.latitude !== 'number' || typeof estacao.longitude !== 'number' || 
+                isNaN(estacao.latitude) || isNaN(estacao.longitude)) {
+                console.log('Não é possível adicionar estação com coordenadas inválidas:', estacao);
+                return; // Não adicionar esta estação
+            }
+
+            // Criar ícone personalizado para estação
+            const stationIcon = L.divIcon({
+                html: `<div style="background-color: ${estacao.linha_cor || '#666'}; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
+                className: 'custom-station-marker',
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+
+            const marker = L.marker([estacao.latitude, estacao.longitude], {
+                icon: stationIcon,
+                title: estacao.nome
+            }).addTo(markerLayer);
+
+            marker.bindPopup(`
+                <div style="padding: 10px; max-width: 250px;">
+                    <h3 style="margin: 0 0 10px 0; color: ${estacao.linha_cor || '#666'};">
+                        ${estacao.nome}
+                    </h3>
+                    <p><strong>Linha:</strong> ${estacao.linha_nome || 'N/A'}</p>
+                    <p><strong>Acessibilidade:</strong> ${estacao.acessivel ? '✓ Acessível' : '✗ Não acessível'}</p>
+                    ${estacao.tem_elevador ? '<p>🛗 Elevador disponível</p>' : ''}
+                    ${estacao.tem_escada_rolante ? '<p>🔄 Escada rolante</p>' : ''}
+                    <button onclick="showStationSchedule(${estacao.id})" 
+                            style="background: ${estacao.linha_cor || '#666'}; color: white; border: none; 
+                                   padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px;">
+                        Ver Horários
+                    </button>
+                </div>
+            `);
+
+            markers[estacao.id] = marker;
+        }
+
+        function addTrainMarker(trem) {
+            // Validar se o trem tem coordenadas válidas
+            if (!trem || typeof trem.latitude !== 'number' || typeof trem.longitude !== 'number' || 
+                isNaN(trem.latitude) || isNaN(trem.longitude)) {
+                console.log('Não é possível adicionar trem com coordenadas inválidas:', trem);
+                return; // Não adicionar este trem
+            }
+
+            // Criar ícone personalizado para trem
+            const trainIcon = L.divIcon({
+                html: `<div style="background-color: ${trem.linha_cor || '#3498db'}; color: white; width: 20px; height: 20px; border-radius: 4px; border: 2px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">🚆</div>`,
+                className: 'custom-train-marker',
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+
+            const marker = L.marker([trem.latitude, trem.longitude], {
+                icon: trainIcon,
+                title: `Trem ${trem.identificador}`,
+                zIndexOffset: 1000
+            }).addTo(markerLayer);
+
+            const statusColor = getStatusColor(trem.status);
+            const lotacaoColor = getLotacaoColor(trem.lotacao);
+            
+            marker.bindPopup(`
+                <div style="padding: 10px; max-width: 300px;">
+                    <h3 style="margin: 0 0 10px 0; color: ${trem.linha_cor || '#3498db'};">
+                        Trem ${trem.identificador}
+                    </h3>
+                    <p><strong>Linha:</strong> ${trem.linha_nome || 'N/A'}</p>
+                    <p><strong>Status:</strong> <span style="color: ${statusColor};">● ${trem.status || 'N/A'}</span></p>
+                    <p><strong>Lotação:</strong> <span style="color: ${lotacaoColor};">● ${trem.lotacao || 'N/A'}</span></p>
+                    <p><strong>Velocidade:</strong> ${trem.velocidade || 0} km/h</p>
+                    <p><strong>Direção:</strong> ${trem.direcao || 'N/A'}</p>
+                    <p><strong>Estação atual:</strong> ${trem.estacao_atual || 'N/A'}</p>
+                    <p><strong>Próxima estação:</strong> ${trem.proxima_estacao || 'N/A'}</p>
+                    ${trem.previsao_chegada ? `<p><strong>Previsão:</strong> ${formatTime(trem.previsao_chegada)}</p>` : ''}
+                </div>
+            `);
+
+            trainMarkers[trem.id] = marker;
+        }
+
+        function showStationInfo(estacao, marker) {
+            const content = `
+                <div style="padding: 10px; max-width: 300px;">
+                    <h3 style="margin: 0 0 10px 0; color: ${estacao.linha_cor};">
+                        ${estacao.nome}
+                    </h3>
+                    <p><strong>Linha:</strong> ${estacao.linha_nome}</p>
+                    <p><strong>Acessibilidade:</strong> ${estacao.acessivel ? '✓ Acessível' : '✗ Não acessível'}</p>
+                    ${estacao.tem_elevador ? '<p>🛗 Elevador disponível</p>' : ''}
+                    ${estacao.tem_escada_rolante ? '<p>🔄 Escada rolante</p>' : ''}
+                    <button onclick="showStationSchedule(${estacao.id})" 
+                            style="background: ${estacao.linha_cor}; color: white; border: none; 
+                                   padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px;">
+                        Ver Horários
+                    </button>
+                </div>
+            `;
+            
+            const infoWindow = new google.maps.InfoWindow({ content });
+            infoWindow.open(map, marker);
+        }
+
+        function showTrainInfo(trem, marker) {
+            const statusColor = getStatusColor(trem.status);
+            const lotacaoColor = getLotacaoColor(trem.lotacao);
+            
+            const content = `
+                <div style="padding: 10px; max-width: 300px;">
+                    <h3 style="margin: 0 0 10px 0; color: ${trem.linha_cor};">
+                        Trem ${trem.identificador}
+                    </h3>
+                    <p><strong>Linha:</strong> ${trem.linha_nome}</p>
+                    <p><strong>Status:</strong> <span style="color: ${statusColor};">● ${trem.status}</span></p>
+                    <p><strong>Lotação:</strong> <span style="color: ${lotacaoColor};">● ${trem.lotacao}</span></p>
+                    <p><strong>Velocidade:</strong> ${trem.velocidade} km/h</p>
+                    <p><strong>Direção:</strong> ${trem.direcao}</p>
+                    <p><strong>Estação atual:</strong> ${trem.estacao_atual}</p>
+                    <p><strong>Próxima estação:</strong> ${trem.proxima_estacao}</p>
+                    ${trem.previsao_chegada ? `<p><strong>Previsão:</strong> ${formatTime(trem.previsao_chegada)}</p>` : ''}
+                </div>
+            `;
+            
+            const infoWindow = new google.maps.InfoWindow({ content });
+            infoWindow.open(map, marker);
+        }
+
+        function connectWebSocket() {
+            // WebSocket temporariamente desabilitado - Sistema otimizado via REST API
+            console.log('🚀 Sistema operando via REST API otimizada (5-15s de atualização)');
+            showNotification('Sistema em tempo real via API ativo!', 'success');
+            
+            // Sistema já funciona perfeitamente com atualizações frequentes
+            // WebSocket será reativado em versão futura se necessário
+            return;
+            
+            /*
+            // Código WebSocket comentado para evitar erros 404
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${window.location.host}/ws/trens/`;
+            
+            try {
+                websocket = new WebSocket(wsUrl);
+                // ... código WebSocket ...
+            } catch (error) {
+                console.log('WebSocket não disponível, usando API REST');
+            }
+            */
+        }
+
+        function handleRealtimeUpdate(data) {
+            if (data.type === 'trem_update') {
+                console.log('Atualizando posição do trem via WebSocket:', data.data);
+                updateTrainMarker(data.data);
+            } else if (data.type === 'linha_update') {
+                console.log('Atualizando status da linha via WebSocket:', data.data);
+                updateLineStatus(data.data);
+            }
+        }
+
+        function updateClimateInfo() {
+            const climaInfo = document.getElementById('climaInfo');
+            if (climaData) {
+                const iconClass = getWeatherIcon(climaData.condicao);
+                climaInfo.innerHTML = `
+                    <div class="clima-icon">
+                        <i class="fas ${iconClass}"></i>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; font-size: 1.1rem;">${climaData.temperatura}°C</div>
+                        <div style="opacity: 0.8;">${climaData.descricao}</div>
+                    </div>
+                `;
+            }
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            document.getElementById('themeToggle').innerHTML = 
+                `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}"></i>`;
+            
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // Aplicar tema escuro ao mapa Leaflet
+            if (isDark) {
+                // Trocar para tiles escuros
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '© OpenStreetMap contributors, © CARTO'
+                }).addTo(map);
+            } else {
+                // Voltar para tiles normais
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+            }
+        }
+
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        function toggleNotifications() {
+            document.getElementById('notificationPanel').classList.toggle('open');
+        }
+
+        function showLoading() {
+            document.getElementById('loadingOverlay').classList.add('show');
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingOverlay').classList.remove('show');
+        }
+
+        function updateTrainMarker(trem) {
+            // Validar se o trem tem coordenadas válidas
+            if (!trem || typeof trem.latitude !== 'number' || typeof trem.longitude !== 'number' || 
+                isNaN(trem.latitude) || isNaN(trem.longitude)) {
+                console.log('Trem com coordenadas inválidas:', trem);
+                return; // Pular este trem
+            }
+
+            const marker = trainMarkers[trem.id];
+            if (marker) {
+                // Atualizar posição
+                marker.setLatLng([trem.latitude, trem.longitude]);
+                
+                // Atualizar ícone baseado no status
+                const trainIcon = L.divIcon({
+                    html: `<div style="background-color: ${trem.linha_cor || '#3498db'}; color: white; width: 20px; height: 20px; border-radius: 4px; border: 2px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">🚆</div>`,
+                    className: 'custom-train-marker',
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 12]
+                });
+                marker.setIcon(trainIcon);
+            } else {
+                // Criar novo marcador se não existir
+                addTrainMarker(trem);
+            }
+        }
+
+        function updateClimateDisplay(climaData) {
+            const climaInfo = document.getElementById('climaInfo');
+            if (climaData && climaInfo) {
+                const iconClass = getWeatherIcon(climaData.condicao);
+                climaInfo.innerHTML = `
+                    <div class="clima-icon">
+                        <i class="fas ${iconClass}"></i>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; font-size: 1.1rem;">${climaData.temperatura}°C</div>
+                        <div style="opacity: 0.8;">${climaData.descricao}</div>
+                    </div>
+                `;
+            }
+        }
+
+        function refreshAllData() {
+            showLoading();
+            
+            // Atualizar dados via API
+            Promise.all([
+                fetch('/api/trens/').then(r => r.json()),
+                fetch('/api/clima/').then(r => r.json())
+            ]).then(([tremsData, climaData]) => {
+                console.log('Dados recebidos:', { tremsData, climaData }); // Debug
+                
+                // Atualizar marcadores de trens
+                if (tremsData && tremsData.trens && Array.isArray(tremsData.trens)) {
+                    tremsData.trens.forEach(trem => {
+                        // Validar cada trem antes de tentar atualizar
+                        if (trem && trem.id) {
+                            updateTrainMarker(trem);
+                        } else {
+                            console.log('Trem inválido ignorado:', trem);
+                        }
+                    });
+                } else {
+                    console.log('Dados de trens inválidos:', tremsData);
+                }
+                
+                // Atualizar informações climáticas
+                if (climaData && climaData.clima) {
+                    updateClimateDisplay(climaData.clima);
+                } else {
+                    console.log('Dados climáticos inválidos:', climaData);
+                }
+                
+                hideLoading();
+                showNotification('Dados atualizados com sucesso!', 'success');
+            }).catch(error => {
+                hideLoading();
+                showNotification('Erro ao atualizar dados', 'error');
+                console.error('Erro detalhado:', error);
+            });
+        }
+
+        function startDataRefresh() {
+            // Primeira atualização imediata
+            refreshAllData();
+            
+            // Atualizar dados a cada 15 segundos (mais frequente)
+            setInterval(refreshAllData, 15000);
+            
+            // Atualizar apenas posições dos trens a cada 5 segundos
+            setInterval(() => {
+                fetch('/api/trens/')
+                    .then(r => r.json())
+                    .then(data => {
+                        if (data && data.trens && Array.isArray(data.trens)) {
+                            data.trens.forEach(trem => {
+                                // Validar cada trem antes de tentar atualizar
+                                if (trem && trem.id && 
+                                    typeof trem.latitude === 'number' && 
+                                    typeof trem.longitude === 'number' &&
+                                    !isNaN(trem.latitude) && !isNaN(trem.longitude)) {
+                                    updateTrainMarker(trem);
+                                }
+                            });
+                        }
+                    })
+                    .catch(error => console.log('Erro ao atualizar posições (silencioso):', error));
+            }, 5000);
+        }
+
+        function getMapStyles() {
+            const isDark = document.body.classList.contains('dark');
+            return isDark ? [
+                { elementType: 'geometry', stylers: [{ color: '#212121' }] },
+                { elementType: 'labels.icon', stylers: [{ visibility: 'off' }] },
+                { elementType: 'labels.text.fill', stylers: [{ color: '#757575' }] },
+                { elementType: 'labels.text.stroke', stylers: [{ color: '#212121' }] },
+                { featureType: 'administrative', elementType: 'geometry', stylers: [{ color: '#757575' }] },
+                { featureType: 'administrative.country', elementType: 'labels.text.fill', stylers: [{ color: '#9e9e9e' }] },
+                { featureType: 'administrative.land_parcel', stylers: [{ visibility: 'off' }] },
+                { featureType: 'administrative.locality', elementType: 'labels.text.fill', stylers: [{ color: '#bdbdbd' }] },
+                { featureType: 'poi', elementType: 'labels.text.fill', stylers: [{ color: '#757575' }] },
+                { featureType: 'poi.park', elementType: 'geometry', stylers: [{ color: '#181818' }] },
+                { featureType: 'poi.park', elementType: 'labels.text.fill', stylers: [{ color: '#616161' }] },
+                { featureType: 'poi.park', elementType: 'labels.text.stroke', stylers: [{ color: '#1b1b1b' }] },
+                { featureType: 'road', elementType: 'geometry.fill', stylers: [{ color: '#2c2c2c' }] },
+                { featureType: 'road', elementType: 'labels.text.fill', stylers: [{ color: '#8a8a8a' }] },
+                { featureType: 'road.arterial', elementType: 'geometry', stylers: [{ color: '#373737' }] },
+                { featureType: 'road.highway', elementType: 'geometry', stylers: [{ color: '#3c3c3c' }] },
+                { featureType: 'road.highway.controlled_access', elementType: 'geometry', stylers: [{ color: '#4e4e4e' }] },
+                { featureType: 'road.local', elementType: 'labels.text.fill', stylers: [{ color: '#616161' }] },
+                { featureType: 'transit', elementType: 'labels.text.fill', stylers: [{ color: '#757575' }] },
+                { featureType: 'water', elementType: 'geometry', stylers: [{ color: '#000000' }] },
+                { featureType: 'water', elementType: 'labels.text.fill', stylers: [{ color: '#3d3d3d' }] }
+            ] : [];
+        }
+
+        function getStatusColor(status) {
+            const colors = {
+                'operacional': '#2ecc71',
+                'atrasado': '#f39c12',
+                'em_manutencao': '#e74c3c',
+                'fora_de_servico': '#95a5a6'
+            };
+            return colors[status] || '#95a5a6';
+        }
+
+        function getLotacaoColor(lotacao) {
+            const colors = {
+                'baixa': '#2ecc71',
+                'media': '#f39c12',
+                'alta': '#e74c3c',
+                'superlotado': '#8e44ad'
+            };
+            return colors[lotacao] || '#95a5a6';
+        }
+
+        function getWeatherIcon(condicao) {
+            const icons = {
+                'clear': 'fa-sun',
+                'clouds': 'fa-cloud',
+                'rain': 'fa-cloud-rain',
+                'drizzle': 'fa-cloud-drizzle',
+                'thunderstorm': 'fa-bolt',
+                'snow': 'fa-snowflake',
+                'mist': 'fa-smog'
+            };
+            return icons[condicao] || 'fa-cloud';
+        }
+
+        function formatTime(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleTimeString('pt-BR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+        }
+
+        function centerMap() {
+            map.setView([-23.5505, -46.6333], 11);
+        }
+
+        function toggleTraffic() {
+            // Funcionalidade de trânsito não disponível no OpenStreetMap básico
+            showNotification('Informações de trânsito não disponíveis', 'info');
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        function focusOnLine(lineNumber) {
+            // Implementar foco na linha específica
+            const lineTrains = trens.filter(t => t.linha === lineNumber);
+            if (lineTrains.length > 0) {
+                const group = new L.featureGroup();
+                lineTrains.forEach(train => {
+                    const marker = trainMarkers[train.id];
+                    if (marker) {
+                        group.addLayer(marker);
+                    }
+                });
+                if (group.getLayers().length > 0) {
+                    map.fitBounds(group.getBounds(), {padding: [20, 20]});
+                }
+            }
+        }
+
+        function showStationSchedule(stationId) {
+            fetch(`/api/estacao/${stationId}/previsao/`)
+                .then(response => response.json())
+                .then(data => {
+                    // Mostrar horários em modal ou painel
+                    console.log('Horários da estação:', data);
+                });
+        }
+
+        function showNotification(message, type = 'info') {
+            // Criar notificação visual no topo da tela
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${type === 'success' ? '#2ecc71' : type === 'error' ? '#e74c3c' : '#3498db'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 10000;
+                font-weight: 500;
+                max-width: 300px;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Animar entrada
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Remover após 3 segundos
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+            
+            console.log(`${type}: ${message}`);
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        function showStationSchedule(stationId) {
+            fetch(`/api/estacao/${stationId}/previsao/`)
+                .then(response => response.json())
+                .then(data => {
+                    // Mostrar horários em modal ou painel
+                    console.log('Horários da estação:', data);
+                    showNotification('Dados da estação carregados', 'success');
+                });
+        }
+
+        function getStatusColor(status) {
+            const colors = {
+                'operacional': '#2ecc71',
+                'atrasado': '#f39c12',
+                'em_manutencao': '#e74c3c',
+                'fora_de_servico': '#95a5a6'
+            };
+            return colors[status] || '#95a5a6';
+        }
+
+        function getLotacaoColor(lotacao) {
+            const colors = {
+                'baixa': '#2ecc71',
+                'media': '#f39c12',
+                'alta': '#e74c3c',
+                'superlotado': '#8e44ad'
+            };
+            return colors[lotacao] || '#95a5a6';
+        }
+
+        function getWeatherIcon(condicao) {
+            const icons = {
+                'clear': 'fa-sun',
+                'clouds': 'fa-cloud',
+                'rain': 'fa-cloud-rain',
+                'drizzle': 'fa-cloud-drizzle',
+                'thunderstorm': 'fa-bolt',
+                'snow': 'fa-snowflake',
+                'mist': 'fa-smog'
+            };
+            return icons[condicao] || 'fa-cloud';
+        }
+
+        function formatTime(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleTimeString('pt-BR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+        }
+
+        // ========== NOVAS FUNÇÕES PARA TRAJETOS E PONTOS DE CONTROLE ==========
+
+        function initLineTrajectories() {
+            // Agrupar estações por linha para criar trajetos
+            const linhasGroup = {};
+            estacoes.forEach(estacao => {
+                const linhaNum = estacao.linha_numero || estacao.linha?.numero;
+                if (!linhasGroup[linhaNum]) {
+                    linhasGroup[linhaNum] = {
+                        numero: linhaNum,
+                        nome: estacao.linha_nome || estacao.linha?.nome,
+                        cor: estacao.linha_cor || estacao.linha?.cor || '#666',
+                        estacoes: []
+                    };
+                }
+                linhasGroup[linhaNum].estacoes.push(estacao);
+            });
+
+            // Ordenar estações por ordem e criar trajetos
+            Object.values(linhasGroup).forEach(linha => {
+                linha.estacoes.sort((a, b) => (a.ordem || 0) - (b.ordem || 0));
+                lineTrajectories[linha.numero] = {
+                    ...linha,
+                    coordinates: linha.estacoes.map(est => [est.latitude, est.longitude])
+                };
+            });
+        }
+
+        function drawLineTrajectories() {
+            Object.values(lineTrajectories).forEach(linha => {
+                if (linha.coordinates && linha.coordinates.length > 1) {
+                    // Criar polilinha para o trajeto da linha
+                    const trajectory = L.polyline(linha.coordinates, {
+                        color: linha.cor,
+                        weight: 4,
+                        opacity: 0.7,
+                        smoothFactor: 1
+                    }).addTo(map);
+
+                    // Adicionar popup informativo
+                    trajectory.bindPopup(`
+                        <div style="padding: 10px;">
+                            <h3 style="margin: 0 0 10px 0; color: ${linha.cor};">
+                                Linha ${linha.numero} - ${linha.nome}
+                            </h3>
+                            <p><strong>Estações:</strong> ${linha.estacoes.length}</p>
+                            <p><strong>Status:</strong> <span style="color: #2ecc71;">● Operacional</span></p>
+                        </div>
+                    `);
+
+                    // Armazenar referência da linha
+                    linha.polyline = trajectory;
+                }
+            });
+        }
+
+        function addStationControlPoint(estacao) {
+            // Validar se a estação tem coordenadas válidas
+            if (!estacao || typeof estacao.latitude !== 'number' || typeof estacao.longitude !== 'number' || 
+                isNaN(estacao.latitude) || isNaN(estacao.longitude)) {
+                console.log('Não é possível adicionar estação com coordenadas inválidas:', estacao);
+                return;
+            }
+
+            // Criar ícone melhorado para estação como ponto de controle
+            const stationIcon = L.divIcon({
+                html: `
+                    <div class="station-control-point" style="
+                        background-color: ${estacao.linha_cor || '#666'}; 
+                        width: 18px; 
+                        height: 18px; 
+                        border-radius: 50%; 
+                        border: 3px solid white; 
+                        box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+                        position: relative;
+                        animation: pulse 2s infinite;
+                    ">
+                        <div style="
+                            position: absolute;
+                            top: -25px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background: white;
+                            color: ${estacao.linha_cor || '#666'};
+                            padding: 2px 6px;
+                            border-radius: 10px;
+                            font-size: 10px;
+                            font-weight: bold;
+                            white-space: nowrap;
+                            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                            display: none;
+                        " class="station-label">
+                            ${estacao.nome}
+                        </div>
+                    </div>
+                `,
+                className: 'custom-station-control',
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+
+            const marker = L.marker([estacao.latitude, estacao.longitude], {
+                icon: stationIcon,
+                title: estacao.nome
+            }).addTo(markerLayer);
+
+            // Mostrar/ocultar label ao passar o mouse
+            marker.on('mouseover', function() {
+                this.getElement().querySelector('.station-label').style.display = 'block';
+            });
+            
+            marker.on('mouseout', function() {
+                this.getElement().querySelector('.station-label').style.display = 'none';
+            });
+
+            // Popup melhorado para ponto de controle
+            marker.bindPopup(`
+                <div style="padding: 15px; max-width: 300px;">
+                    <h3 style="margin: 0 0 15px 0; color: ${estacao.linha_cor || '#666'};">
+                        🚉 ${estacao.nome}
+                    </h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                        <div>
+                            <strong>Linha:</strong><br>
+                            <span style="color: ${estacao.linha_cor || '#666'};">
+                                ${estacao.linha_numero || 'N/A'} - ${estacao.linha_nome || 'N/A'}
+                            </span>
+                        </div>
+                        <div>
+                            <strong>Ordem:</strong><br>
+                            ${estacao.ordem || 'N/A'}ª estação
+                        </div>
+                    </div>
+                    
+                    <div style="margin: 10px 0;">
+                        <strong>Recursos:</strong><br>
+                        <div style="display: flex; gap: 10px; margin-top: 5px;">
+                            ${estacao.acessivel ? '<span style="color: #2ecc71;">♿ Acessível</span>' : '<span style="color: #e74c3c;">♿ Não acessível</span>'}
+                            ${estacao.tem_elevador ? '<span style="color: #2ecc71;">🛗 Elevador</span>' : ''}
+                            ${estacao.tem_escada_rolante ? '<span style="color: #2ecc71;">🔄 Escada rolante</span>' : ''}
+                        </div>
+                    </div>
+                    
+                    <button onclick="showStationSchedule(${estacao.id})" 
+                            style="background: ${estacao.linha_cor || '#666'}; color: white; border: none; 
+                                   padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-top: 10px;
+                                   font-weight: 600; width: 100%;">
+                        📅 Ver Horários e Previsões
+                    </button>
+                </div>
+            `);
+
+            // Armazenar ponto de controle
+            stationControlPoints[estacao.id] = {
+                marker: marker,
+                estacao: estacao,
+                isControlPoint: true
+            };
+            
+            markers[estacao.id] = marker;
+        }
+
+        function updateTrainMarker(trem) {
+            // Validar coordenadas
+            if (!trem || typeof trem.latitude !== 'number' || typeof trem.longitude !== 'number' || 
+                isNaN(trem.latitude) || isNaN(trem.longitude)) {
+                console.log('Não é possível atualizar trem com coordenadas inválidas:', trem);
+                return;
+            }
+
+            const existingMarker = trainMarkers[trem.id];
+            
+            if (existingMarker) {
+                // Movimento suavizado para o trem
+                const currentPos = existingMarker.getLatLng();
+                const newPos = [trem.latitude, trem.longitude];
+                
+                // Criar animação suave de movimento
+                animateTrainMovement(existingMarker, currentPos, newPos, trem);
+                
+                // Atualizar popup com informações mais detalhadas
+                updateTrainPopup(existingMarker, trem);
+            } else {
+                // Criar novo marcador se não existir
+                addTrainMarker(trem);
+            }
+            
+            // Verificar se passou por ponto de controle
+            checkControlPointPassage(trem);
+        }
+
+        function animateTrainMovement(marker, fromPos, toPos, trem) {
+            const steps = 20; // Número de passos para a animação
+            const latStep = (toPos[0] - fromPos.lat) / steps;
+            const lngStep = (toPos[1] - fromPos.lng) / steps;
+            let currentStep = 0;
+            
+            const animate = () => {
+                if (currentStep < steps) {
+                    currentStep++;
+                    const newLat = fromPos.lat + (latStep * currentStep);
+                    const newLng = fromPos.lng + (lngStep * currentStep);
+                    marker.setLatLng([newLat, newLng]);
+                    
+                    // Continuar animação
+                    setTimeout(animate, 50); // 50ms entre passos = 1 segundo total
+                }
+            };
+            
+            animate();
+        }
+
+        function updateTrainPopup(marker, trem) {
+            const statusColor = getStatusColor(trem.status);
+            const lotacaoColor = getLotacaoColor(trem.lotacao);
+            
+            marker.bindPopup(`
+                <div style="padding: 15px; max-width: 350px;">
+                    <h3 style="margin: 0 0 15px 0; color: ${trem.linha_cor || '#3498db'};">
+                        🚆 Trem ${trem.identificador}
+                    </h3>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                        <div>
+                            <strong>Linha:</strong><br>
+                            <span style="color: ${trem.linha_cor || '#3498db'};">
+                                ${trem.linha_nome || 'N/A'}
+                            </span>
+                        </div>
+                        <div>
+                            <strong>Velocidade:</strong><br>
+                            <span style="color: ${trem.velocidade > 0 ? '#2ecc71' : '#e74c3c'};">
+                                ${trem.velocidade || 0} km/h
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <div style="margin-bottom: 8px;">
+                            <strong>Status:</strong> <span style="color: ${statusColor};">● ${trem.status || 'N/A'}</span>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <strong>Lotação:</strong> <span style="color: ${lotacaoColor};">● ${trem.lotacao || 'N/A'}</span>
+                        </div>
+                        <div>
+                            <strong>Direção:</strong> ${trem.direcao || 'N/A'}
+                        </div>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 10px; border-radius: 6px; margin-bottom: 10px;">
+                        <div style="margin-bottom: 5px;">
+                            <strong>📍 Estação atual:</strong> ${trem.estacao_atual || 'Em trânsito'}
+                        </div>
+                        <div style="margin-bottom: 5px;">
+                            <strong>➡️ Próxima estação:</strong> ${trem.proxima_estacao || 'Indisponível'}
+                        </div>
+                        ${trem.previsao_chegada ? `
+                            <div>
+                                <strong>🕐 Previsão:</strong> ${formatTime(trem.previsao_chegada)}
+                            </div>
+                        ` : ''}
+                    </div>
+                    
+                    <div style="font-size: 12px; color: #666; text-align: center;">
+                        Última atualização: ${formatTime(trem.ultima_atualizacao)}
+                    </div>
+                </div>
+            `);
+        }
+
+        function checkControlPointPassage(trem) {
+            // Verificar se o trem passou por algum ponto de controle (estação)
+            Object.values(stationControlPoints).forEach(controlPoint => {
+                const station = controlPoint.estacao;
+                
+                // Calcular distância entre trem e estação
+                const distance = calculateDistance(
+                    trem.latitude, trem.longitude,
+                    station.latitude, station.longitude
+                );
+                
+                // Se está muito próximo (menos de 100 metros), considera que passou pelo ponto
+                if (distance < 0.1) { // 0.1 km = 100 metros
+                    triggerControlPointEvent(trem, station);
+                }
+            });
+        }
+
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            // Fórmula de Haversine para calcular distância entre dois pontos
+            const R = 6371; // Raio da Terra em km
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLon/2) * Math.sin(dLon/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
+        }
+
+        function triggerControlPointEvent(trem, station) {
+            // Criar efeito visual no ponto de controle
+            const controlPoint = stationControlPoints[station.id];
+            if (controlPoint && controlPoint.marker) {
+                // Adicionar efeito de pulsação temporário
+                const element = controlPoint.marker.getElement();
+                if (element) {
+                    element.style.animation = 'none';
+                    setTimeout(() => {
+                        element.style.animation = 'pulse 0.5s ease-in-out 3';
+                    }, 10);
+                }
+                
+                // Log do evento para debuging
+                console.log(`🚆 Trem ${trem.identificador} passou pela estação ${station.nome}`);
+                
+                // Opcional: mostrar notificação
+                if (Math.random() < 0.3) { // 30% de chance de mostrar notificação
+                    showNotification(
+                        `Trem ${trem.identificador} chegou em ${station.nome}`, 
+                        'info'
+                    );
+                }
+            }
+        }
+
+        // ========== FUNÇÕES DE FOCO E INTERAÇÃO MELHORADAS ==========
+
+        function focusOnLine(lineNumber) {
+            const line = lineTrajectories[lineNumber];
+            if (line && line.coordinates && line.coordinates.length > 0) {
+                // Criar bounds incluindo todas as estações da linha
+                const group = new L.featureGroup();
+                line.coordinates.forEach(coord => {
+                    L.marker(coord).addTo(group);
+                });
+                
+                // Ajustar mapa para mostrar toda a linha
+                map.fitBounds(group.getBounds().pad(0.1));
+                
+                // Destacar linha temporariamente
+                if (line.polyline) {
+                    const originalWeight = line.polyline.options.weight;
+                    const originalOpacity = line.polyline.options.opacity;
+                    
+                    line.polyline.setStyle({
+                        weight: 8,
+                        opacity: 1
+                    });
+                    
+                    // Restaurar após 2 segundos
+                    setTimeout(() => {
+                        line.polyline.setStyle({
+                            weight: originalWeight,
+                            opacity: originalOpacity
+                        });
+                    }, 2000);
+                }
+                
+                showNotification(`Focalizando Linha ${lineNumber} - ${line.nome}`, 'info');
+            }
+        }
+
+        // Carregar tema salvo
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark');
+            document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    </script>
+</body>
+
+</html>

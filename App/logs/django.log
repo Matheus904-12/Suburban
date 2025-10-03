@@ -1,0 +1,1437 @@
+Watching for file changes with StatReloader
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759454792984 HTTP/1.1" 301 0
+Not Found: /mapa/
+"GET /mapa/ HTTP/1.1" 404 4501
+"GET / HTTP/1.1" 301 0
+Not Found: /mapa/
+"GET /mapa/ HTTP/1.1" 404 4501
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4519
+C:\app3\Suburban\App\cptm_tracker\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\app3\Suburban\App\apps\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /mapa/ HTTP/1.1" 200 69921
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759455293653 HTTP/1.1" 200 69947
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /mapa/?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759455297674 HTTP/1.1" 200 69921
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4742
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+- Broken pipe from ('127.0.0.1', 60234)
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 383
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 396
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+C:\app3\Suburban\App\cptm_tracker\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Watching for file changes with StatReloader
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759455889950 HTTP/1.1" 200 74196
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 565
+C:\app3\Suburban\App\cptm_tracker\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /mapa/ HTTP/1.1" 200 74171
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4742
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759455965062 HTTP/1.1" 200 73535
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /?v=2&id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759455976074 HTTP/1.1" 200 73544
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /?v=2 HTTP/1.1" 200 73519
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 564
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /?v=2 HTTP/1.1" 200 73530
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 565
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/clima/ HTTP/1.1" 200 397
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4742
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 398
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+- Broken pipe from ('127.0.0.1', 50814)
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/clima/ HTTP/1.1" 200 383
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 388
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /?v=3&id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759456202958 HTTP/1.1" 200 77865
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /?v=3 HTTP/1.1" 200 77867
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 379
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 398
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 392
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 396
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 380
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 566
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 561
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 565
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+C:\app3\Suburban\App\cptm_tracker\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 394
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 563
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 565
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 388
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/clima/ HTTP/1.1" 200 392
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 396
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Watching for file changes with StatReloader
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 397
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 380
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759457304068 HTTP/1.1" 200 80397
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759457311021 HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 380
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 565
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/clima/ HTTP/1.1" 200 565
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /api/estacoes/
+"GET /api/estacoes/?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759457371972 HTTP/1.1" 404 4714
+Not Found: /api/estacoes/
+"GET /api/estacoes/ HTTP/1.1" 404 4637
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+"GET /api/trens/?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759457384028 HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4625
+C:\app3\Suburban\App\apps\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\app3\Suburban\App\apps\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 566
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/clima/ HTTP/1.1" 200 397
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Internal Server Error: /api/estacoes/
+Traceback (most recent call last):
+  File "C:\Users\mathe\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\mathe\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\app3\Suburban\App\apps\views.py", line 403, in api_estacoes
+    'ativa': estacao.ativa,
+             ^^^^^^^^^^^^^
+AttributeError: 'Estacao' object has no attribute 'ativa'
+"GET /api/estacoes/?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759457425063 HTTP/1.1" 500 72422
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Internal Server Error: /api/estacoes/
+Traceback (most recent call last):
+  File "C:\Users\mathe\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\mathe\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\app3\Suburban\App\apps\views.py", line 403, in api_estacoes
+    'ativa': estacao.ativa,
+             ^^^^^^^^^^^^^
+AttributeError: 'Estacao' object has no attribute 'ativa'
+"GET /api/estacoes/ HTTP/1.1" 500 72442
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+C:\app3\Suburban\App\apps\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/estacoes/?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759457454184 HTTP/1.1" 200 13576
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/estacoes/ HTTP/1.1" 200 13576
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/estacoes/ HTTP/1.1" 200 13576
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/clima/ HTTP/1.1" 200 566
+"GET /api/clima/ HTTP/1.1" 200 397
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/clima/ HTTP/1.1" 200 397
+"GET /api/clima/ HTTP/1.1" 200 383
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET / HTTP/1.1" 200 80397
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 385
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 562
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5009
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 386
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+C:\app3\Suburban\App\apps\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/clima/ HTTP/1.1" 200 379
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 398
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 386
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 564
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 392
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/clima/ HTTP/1.1" 200 397
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 394
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 398
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/estacoes/ HTTP/1.1" 200 13576
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 565
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /api/clima/ HTTP/1.1" 200 382
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/clima/ HTTP/1.1" 200 567
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 388
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 396
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/clima/ HTTP/1.1" 200 383
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759457819971 HTTP/1.1" 200 99119
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 386
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET / HTTP/1.1" 200 99111
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5009
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/clima/ HTTP/1.1" 200 397
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+Not Found: /ws/trens/
+"GET /ws/trens/ HTTP/1.1" 404 4892
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 383
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 385
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 383
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 383
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+C:\app3\Suburban\App\cptm_tracker\settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 379
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/clima/ HTTP/1.1" 200 565
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Watching for file changes with StatReloader
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/clima/ HTTP/1.1" 200 398
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 388
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759458106416 HTTP/1.1" 200 99607
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 383
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 398
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 397
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 565
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/clima/ HTTP/1.1" 200 397
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+Watching for file changes with StatReloader
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759458594967 HTTP/1.1" 200 103663
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759458601147 HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/trens/ HTTP/1.1" 200 24628
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/trens/ HTTP/1.1" 200 24628
+Watching for file changes with StatReloader
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759459760208 HTTP/1.1" 200 103867
+"GET /api/trens/?id=777e1560-a1f4-4240-95a6-fbc41ca71492&vscodeBrowserReqId=1759459763357 HTTP/1.1" 200 25257
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/clima/ HTTP/1.1" 200 563
+"GET /api/trens/ HTTP/1.1" 200 25248
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4898
+"GET / HTTP/1.1" 200 103860
+"GET /api/trens/ HTTP/1.1" 200 25249
+"GET /api/clima/ HTTP/1.1" 200 392
+"GET /api/trens/ HTTP/1.1" 200 25259
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/clima/ HTTP/1.1" 200 566
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/trens/ HTTP/1.1" 200 25258
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/trens/ HTTP/1.1" 200 25249
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/clima/ HTTP/1.1" 200 565
+"GET /api/trens/ HTTP/1.1" 200 25259
+- Broken pipe from ('127.0.0.1', 64733)
+"GET /api/trens/ HTTP/1.1" 200 25252
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25258
+"GET /api/trens/ HTTP/1.1" 200 25258
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 25254
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/trens/ HTTP/1.1" 200 25252
+"GET /api/trens/ HTTP/1.1" 200 25258
+"GET /api/trens/ HTTP/1.1" 200 25258
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/trens/ HTTP/1.1" 200 25252
+"GET /api/trens/ HTTP/1.1" 200 25252
+"GET /api/trens/ HTTP/1.1" 200 25252
+"GET /api/clima/ HTTP/1.1" 200 397
+"GET /api/trens/ HTTP/1.1" 200 25248
+"GET /api/trens/ HTTP/1.1" 200 25247
+"GET /api/trens/ HTTP/1.1" 200 25245
+"GET /api/trens/ HTTP/1.1" 200 25245
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/trens/ HTTP/1.1" 200 25236
+"GET /api/trens/ HTTP/1.1" 200 25235
+"GET /api/trens/ HTTP/1.1" 200 25238
+"GET /api/trens/ HTTP/1.1" 200 25238
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 25232
+"GET /api/trens/ HTTP/1.1" 200 25239
+"GET /api/trens/ HTTP/1.1" 200 25236
+"GET /api/trens/ HTTP/1.1" 200 25236
+"GET /api/clima/ HTTP/1.1" 200 397
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25254
+"GET /api/trens/ HTTP/1.1" 200 25254
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 25251
+"GET /api/trens/ HTTP/1.1" 200 25244
+"GET /api/trens/ HTTP/1.1" 200 25241
+"GET /api/trens/ HTTP/1.1" 200 25241
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 25240
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/trens/ HTTP/1.1" 200 25236
+"GET /api/trens/ HTTP/1.1" 200 25236
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/trens/ HTTP/1.1" 200 25223
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/trens/ HTTP/1.1" 200 25241
+"GET /api/trens/ HTTP/1.1" 200 25241
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 25249
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/trens/ HTTP/1.1" 200 25262
+"GET /api/trens/ HTTP/1.1" 200 25262
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/trens/ HTTP/1.1" 200 25267
+"GET /api/trens/ HTTP/1.1" 200 25268
+"GET /api/trens/ HTTP/1.1" 200 25269
+"GET /api/trens/ HTTP/1.1" 200 25269
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 25269
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 25264
+"GET /api/trens/ HTTP/1.1" 200 25267
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25264
+"GET /api/trens/ HTTP/1.1" 200 25240
+"GET /api/trens/ HTTP/1.1" 200 25240
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/trens/ HTTP/1.1" 200 25270
+"GET /api/trens/ HTTP/1.1" 200 25270
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/trens/ HTTP/1.1" 200 25257
+"GET /api/trens/ HTTP/1.1" 200 25257
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 25242
+"GET /api/trens/ HTTP/1.1" 200 25254
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/clima/ HTTP/1.1" 200 386
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25259
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/trens/ HTTP/1.1" 200 25247
+"GET /api/trens/ HTTP/1.1" 200 25251
+"GET /api/trens/ HTTP/1.1" 200 25251
+"GET /api/clima/ HTTP/1.1" 200 563
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/trens/ HTTP/1.1" 200 25248
+"GET /api/trens/ HTTP/1.1" 200 25223
+"GET /api/trens/ HTTP/1.1" 200 25223
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/trens/ HTTP/1.1" 200 25247
+"GET /api/trens/ HTTP/1.1" 200 25244
+"GET /api/trens/ HTTP/1.1" 200 25244
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 25245
+"GET /api/trens/ HTTP/1.1" 200 25247
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 25262
+"GET /api/trens/ HTTP/1.1" 200 25250
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/trens/ HTTP/1.1" 200 25256
+"GET /api/clima/ HTTP/1.1" 200 381
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25253
+"GET /api/trens/ HTTP/1.1" 200 25253
+"GET /api/trens/ HTTP/1.1" 200 25253
+"GET /api/clima/ HTTP/1.1" 200 564
+"GET /api/trens/ HTTP/1.1" 200 25259
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 25266
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 25272
+"GET /api/trens/ HTTP/1.1" 200 25271
+"GET /api/trens/ HTTP/1.1" 200 25278
+"GET /api/trens/ HTTP/1.1" 200 25278
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 25269
+"GET /api/trens/ HTTP/1.1" 200 25272
+"GET /api/trens/ HTTP/1.1" 200 25273
+"GET /api/trens/ HTTP/1.1" 200 25273
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 25275
+"GET /api/trens/ HTTP/1.1" 200 25277
+"GET /api/trens/ HTTP/1.1" 200 25279
+"GET /api/trens/ HTTP/1.1" 200 25279
+"GET /api/clima/ HTTP/1.1" 200 388
+"GET /api/trens/ HTTP/1.1" 200 25276
+"GET /api/trens/ HTTP/1.1" 200 25281
+"GET /api/trens/ HTTP/1.1" 200 25275
+"GET /api/trens/ HTTP/1.1" 200 25275
+"GET /api/clima/ HTTP/1.1" 200 563
+"GET /api/trens/ HTTP/1.1" 200 25274
+"GET /api/trens/ HTTP/1.1" 200 25277
+"GET /api/trens/ HTTP/1.1" 200 25284
+"GET /api/trens/ HTTP/1.1" 200 25284
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/trens/ HTTP/1.1" 200 25282
+"GET /api/trens/ HTTP/1.1" 200 25283
+"GET /api/trens/ HTTP/1.1" 200 25289
+"GET /api/trens/ HTTP/1.1" 200 25289
+"GET /api/clima/ HTTP/1.1" 200 388
+"GET /api/trens/ HTTP/1.1" 200 25289
+"GET /api/trens/ HTTP/1.1" 200 25273
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/clima/ HTTP/1.1" 200 566
+"GET /api/trens/ HTTP/1.1" 200 25268
+"GET /api/trens/ HTTP/1.1" 200 25262
+"GET /api/trens/ HTTP/1.1" 200 25259
+"GET /api/trens/ HTTP/1.1" 200 25259
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 25257
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25258
+"GET /api/trens/ HTTP/1.1" 200 25258
+"GET /api/clima/ HTTP/1.1" 200 395
+"GET /api/trens/ HTTP/1.1" 200 25259
+"GET /api/trens/ HTTP/1.1" 200 25255
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/clima/ HTTP/1.1" 200 382
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25266
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/clima/ HTTP/1.1" 200 380
+"GET /api/trens/ HTTP/1.1" 200 25265
+"GET /api/trens/ HTTP/1.1" 200 25267
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/clima/ HTTP/1.1" 200 393
+"GET /api/trens/ HTTP/1.1" 200 25263
+"GET /api/trens/ HTTP/1.1" 200 25268
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/trens/ HTTP/1.1" 200 25260
+"GET /api/clima/ HTTP/1.1" 200 398
+"GET /api/trens/ HTTP/1.1" 200 25258
+"GET /api/trens/ HTTP/1.1" 200 25253
+"GET /api/trens/ HTTP/1.1" 200 25270
+"GET /api/trens/ HTTP/1.1" 200 25270
+"GET /api/clima/ HTTP/1.1" 200 396
+"GET /api/trens/ HTTP/1.1" 200 25274
+"GET /api/trens/ HTTP/1.1" 200 25267
+"GET /api/trens/ HTTP/1.1" 200 25267
+"GET /api/trens/ HTTP/1.1" 200 25267
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 25267
+"GET /api/trens/ HTTP/1.1" 200 25269
+"GET /api/trens/ HTTP/1.1" 200 25268
+"GET /api/trens/ HTTP/1.1" 200 25268
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 25277
+Watching for file changes with StatReloader
+"GET /api/trens/ HTTP/1.1" 200 25266
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/trens/ HTTP/1.1" 200 25261
+"GET /api/clima/ HTTP/1.1" 200 398
+"GET /api/trens/ HTTP/1.1" 200 25257
+Watching for file changes with StatReloader
+"GET /api/trens/ HTTP/1.1" 200 25244
+"GET /api/trens/ HTTP/1.1" 200 25240
+"GET /api/trens/ HTTP/1.1" 200 25240
+"GET /api/clima/ HTTP/1.1" 200 383
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/trens/ HTTP/1.1" 200 25241
+"GET /api/trens/ HTTP/1.1" 200 25244
+"GET /api/trens/ HTTP/1.1" 200 25244
+"GET /api/clima/ HTTP/1.1" 200 398
+"GET /api/trens/ HTTP/1.1" 200 25245
+"GET /api/trens/ HTTP/1.1" 200 25237
+"GET /api/trens/ HTTP/1.1" 200 25249
+"GET /api/trens/ HTTP/1.1" 200 25249
+"GET /api/clima/ HTTP/1.1" 200 563
+"GET /api/trens/ HTTP/1.1" 200 25221
+"GET /api/trens/ HTTP/1.1" 200 25243
+"GET /api/trens/ HTTP/1.1" 200 25234
+"GET /api/trens/ HTTP/1.1" 200 25234
+"GET /api/clima/ HTTP/1.1" 200 394
+"GET /api/trens/ HTTP/1.1" 200 25241
+"GET /api/trens/ HTTP/1.1" 200 25236
+"GET /api/trens/ HTTP/1.1" 200 25241
+"GET /api/trens/ HTTP/1.1" 200 25241
+"GET /api/clima/ HTTP/1.1" 200 387
+"GET /api/trens/ HTTP/1.1" 200 25241
