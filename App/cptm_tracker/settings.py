@@ -35,16 +35,16 @@ ALLOWED_HOSTS = [
     'localhost', 
     '127.0.0.1', 
     '0.0.0.0',
-    '*.ngrok.io',
-    '*.ngrok-free.app',
-    '*.railway.app',
     '*.onrender.com',
+    'cptm-tracker-live.onrender.com',
+    '*.railway.app',
     '*.herokuapp.com',
     '*.vercel.app',
-    '*.netlify.app',
-    'cptm-tracker.loca.lt',
-    '*'  # Permitir todos os hosts durante desenvolvimento
 ]
+
+# Em produção, adicionar todos os subdomínios do Render
+if not DEBUG:
+    ALLOWED_HOSTS.append('.onrender.com')
 
 
 # Application definition
@@ -64,6 +64,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -93,7 +94,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'cptm_tracker.wsgi.application'
 ASGI_APPLICATION = 'cptm_tracker.asgi.application'
 
-# Channels
+# Channels (usando In-Memory para deploy gratuito)
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels.layers.InMemoryChannelLayer',
@@ -148,6 +149,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
+# WhiteNoise settings for static files
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -170,19 +174,11 @@ CORS_ALLOW_ALL_ORIGINS = DEBUG
 GOOGLE_MAPS_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY', 'SUA_API_KEY_GOOGLE')
 OPENWEATHER_API_KEY = os.getenv('OPENWEATHER_API_KEY', 'SUA_API_KEY_OPENWEATHER')
 
-# Celery Configuration
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = TIME_ZONE
-
-# Configurações de cache
+# Configurações de cache (usando DB cache para deploy gratuito)
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'cache_table',
     }
 }
 
