@@ -1,0 +1,13 @@
+services:
+- buildCommand: pip install -r requirements.txt && python manage.py migrate && python
+    manage.py collectstatic --noinput
+  env: python
+  envVars:
+  - key: DJANGO_SETTINGS_MODULE
+    value: cptm_tracker.settings
+  - key: DEBUG
+    value: 'False'
+  name: cptm-tracker
+  plan: free
+  startCommand: python manage.py runserver 0.0.0.0:$PORT
+  type: web
