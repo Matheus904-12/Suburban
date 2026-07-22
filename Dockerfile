@@ -19,6 +19,6 @@ ENV PYTHONUNBUFFERED=1
 
 RUN python manage.py collectstatic --noinput
 
-EXPOSE 8000
+EXPOSE 8080
 
-CMD ["sh", "-c", "python manage.py migrate && daphne -b 0.0.0.0 -p 8000 cptm_tracker.asgi:application"]
+CMD ["sh", "-c", "python manage.py migrate && daphne -b 0.0.0.0 -p 8080 cptm_tracker.asgi:application"]
