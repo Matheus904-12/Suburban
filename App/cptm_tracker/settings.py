@@ -40,6 +40,8 @@ ALLOWED_HOSTS = [
     '*.railway.app',
     '*.herokuapp.com',
     '*.vercel.app',
+    '*.fly.dev',
+    'cptm-tracker.fly.dev',
 ]
 
 # Em produção, adicionar todos os subdomínios do Render
@@ -107,7 +109,7 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.getenv('SQLITE_PATH', BASE_DIR / 'db.sqlite3'),
     }
 }
 

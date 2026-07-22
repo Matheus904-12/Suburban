@@ -1,0 +1,23 @@
+app = "cptm-tracker"
+primary_region = "gru"  # São Paulo — menor latência pro Brasil
+
+[build]
+
+[env]
+  ALLOWED_HOSTS = ".fly.dev,localhost,127.0.0.1"
+  DEBUG = "False"
+
+[[mounts]]
+  source = "cptm_data"
+  destination = "/app/data"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"
